@@ -3280,7 +3280,7 @@ tbody.collapse.in {
 .btn-group .btn + .btn-group,
 .btn-group .btn-group + .btn,
 .btn-group .btn-group + .btn-group {
-  margin-left: -1px;
+  margin-left: -3px;
 }
 .btn-toolbar {
   margin-left: -5px;
@@ -3418,7 +3418,7 @@ fieldset[disabled] .btn-group .btn-default.active {
 .btn-group-vertical > .btn + .btn-group,
 .btn-group-vertical > .btn-group + .btn,
 .btn-group-vertical > .btn-group + .btn-group {
-  margin-top: -1px;
+  margin-top: -3px;
   margin-left: 0;
 }
 .btn-group-vertical > .btn:not(:first-child):not(:last-child) {
@@ -5843,18 +5843,28 @@ button.close {
 .carousel-control .icon-prev,
 .carousel-control .glyphicon-chevron-left {
   left: 50%;
-  margin-left: -10px;
+  margin-left: -15px;
+  border: 2px solid;
+}
+.carousel-control .icon-prev:before,
+.carousel-control .glyphicon-chevron-left:before {
+  content: '';
 }
 .carousel-control .icon-next,
 .carousel-control .glyphicon-chevron-right {
   right: 50%;
-  margin-right: -10px;
+  margin-right: -15px;
+  border: 2px solid;
+}
+.carousel-control .icon-next:before,
+.carousel-control .glyphicon-chevron-right:before {
+  content: '';
 }
 .carousel-control .icon-prev,
 .carousel-control .icon-next {
-  width: 20px;
-  height: 20px;
-  margin-top: -10px;
+  width: 45px;
+  height: 45px;
+  margin-top: -20px;
   font-family: serif;
 }
 .carousel-control .icon-prev:before {
@@ -5912,9 +5922,9 @@ button.close {
   .carousel-control .glyphicon-chevron-right,
   .carousel-control .icon-prev,
   .carousel-control .icon-next {
-    width: 30px;
-    height: 30px;
-    margin-top: -15px;
+    width: 45px;
+    height: 45px;
+    margin-top: -20px;
     font-size: 30px;
   }
   .carousel-control .glyphicon-chevron-left,
@@ -5932,6 +5942,13 @@ button.close {
   }
   .carousel-indicators {
     bottom: 20px;
+  }
+}
+@media (max-width: 767px) {
+  .carousel-control .glyphicon-chevron-left,
+  .carousel-control .glyphicon-chevron-right {
+    border: 0;
+    top: 40%;
   }
 }
 .clearfix:before,
