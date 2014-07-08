@@ -10,17 +10,15 @@
 
   &:hover,
   &:focus,
-  &:active,
-  &.active,
   .open > .dropdown-toggle& {
     color: @color;
-    background-color: darken(@background, 10%);
-        border-color: darken(@border, 12%);
+    background-color: @border;
   }
   &:active,
   &.active,
   .open > .dropdown-toggle& {
     background-image: none;
+    background-color: darken(@border, 10%);
   }
   &.disabled,
   &[disabled],
