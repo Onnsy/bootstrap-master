@@ -2742,7 +2742,7 @@ select[multiple].input-lg {
   white-space: nowrap;
   padding: 6px 12px;
   font-size: 14px;
-  line-height: 1.42857143;
+  line-height: 1.35;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
