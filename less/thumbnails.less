@@ -13,6 +13,7 @@
   border: 1px solid @thumbnail-border;
   border-radius: @thumbnail-border-radius;
   .transition(all .2s ease-in-out);
+  .box-shadow(4px 5px rgba(0, 0, 0, 0.06));
 
   > img,
   a > img {
@@ -26,6 +27,7 @@
   a&:focus,
   a&.active {
     border-color: @link-color;
+    .box-shadow(4px 5px rgba(red(@link-color), green(@link-color), blue(@link-color), 0.3));
   }
 
   // Image captions
