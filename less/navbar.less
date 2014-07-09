@@ -12,13 +12,13 @@
   position: relative;
   min-height: @navbar-height; // Ensure a navbar always shows (e.g., without a .navbar-brand in collapsed mode)
   margin-bottom: @navbar-margin-bottom;
-  border: 1px solid transparent;
+  border: 3px solid transparent;
 
   // Prevent floats from breaking the navbar
   &:extend(.clearfix all);
 
   @media (min-width: @grid-float-breakpoint) {
-    border-radius: @navbar-border-radius;
+    
   }
 }
 
@@ -299,6 +299,8 @@
 .navbar-form {
   margin-left: -@navbar-padding-horizontal;
   margin-right: -@navbar-padding-horizontal;
+  margin-top: 7px;
+  margin-bottom: 6px;
   padding: 10px @navbar-padding-horizontal;
   border-top: 1px solid transparent;
   border-bottom: 1px solid transparent;
@@ -309,13 +311,12 @@
   .form-inline();
 
   .form-group {
+    margin-bottom: 3px;
     @media (max-width: @grid-float-breakpoint-max) {
       margin-bottom: 5px;
     }
   }
-
-  // Vertically center in expanded, horizontal navbar
-  .navbar-vertical-align(@input-height-base);
+  
 
   // Undo 100% width for pull classes
   @media (min-width: @grid-float-breakpoint) {
