@@ -19,11 +19,11 @@
     > a {
       position: relative;
       display: block;
-      padding: @nav-link-padding;
+      padding: 5px 15px; //default is @nav-link-padding
       &:hover,
       &:focus {
         text-decoration: none;
-        background-color: @nav-link-hover-bg;
+        background-color: #dddddd; //default is @nav-link-hover-bg
       }
     }
 
@@ -74,20 +74,24 @@
 
 // Give the tabs something to sit on
 .nav-tabs {
-  border-bottom: 1px solid @nav-tabs-border-color;
+  border-bottom: 3px solid @nav-tabs-border-color;
   > li {
     float: left;
     // Make the list-items overlay the bottom border
-    margin-bottom: -1px;
+    margin-bottom: -3px;
 
     // Actual tabs (as links)
     > a {
-      margin-right: 2px;
+      margin-right: 5px;
       line-height: @line-height-base;
-      border: 1px solid transparent;
-      border-radius: @border-radius-base @border-radius-base 0 0;
-      &:hover {
-        border-color: @nav-tabs-link-hover-border-color @nav-tabs-link-hover-border-color @nav-tabs-border-color;
+      border: 3px solid transparent;
+      border-bottom-style: none;
+      //border-radius: @border-radius-base @border-radius-base 0 0;
+      &:hover,
+      &:active,
+      &:focus {
+        border-color: #dddddd; //default is @nav-tabs-link-hover-border-color @nav-tabs-link-hover-border-color @nav-tabs-border-color
+        
       }
     }
 
@@ -98,18 +102,38 @@
       &:focus {
         color: @nav-tabs-active-link-hover-color;
         background-color: @nav-tabs-active-link-hover-bg;
-        border: 1px solid @nav-tabs-active-link-hover-border-color;
+        border: 3px solid @nav-tabs-active-link-hover-border-color;
         border-bottom-color: transparent;
+        border-bottom-style: none;
         cursor: default;
       }
+    }
+    &.dropdown.open > a{
+      border-bottom: 3px solid;
+      padding-bottom: 5px;
     }
   }
   // pulling this in mainly for less shorthand
   &.nav-justified {
     .nav-justified();
     .nav-tabs-justified();
+
+    > li {
+      > a{
+        &:hover,
+        &:active,
+        &:focus{
+          border-top: 3px solid #dddddd;
+        }
+      }
+    }
   }
+  
 }
+.nav-tabs > li > a{
+  padding: 5px 15px 8px;
+}
+
 
 
 // Pills
@@ -121,9 +145,10 @@
     // Links rendered as pills
     > a {
       border-radius: @nav-pills-border-radius;
+      border: 3px solid transparent;
     }
     + li {
-      margin-left: 2px;
+      margin-left: 5px;
     }
 
     // Active state
@@ -140,12 +165,13 @@
 }
 
 
+
 // Stacked pills
 .nav-stacked {
   > li {
     float: none;
     + li {
-      margin-top: 2px;
+      margin-top: 5px;
       margin-left: 0; // no need for this gap between nav items
     }
   }
@@ -194,25 +220,30 @@
   > li > a {
     // Override margin from .nav-tabs
     margin-right: 0;
-    border-radius: @border-radius-base;
+    // border-radius: @border-radius-base;
+    border-left-style: none;
+    border-right-style: none;
+    border-top-style: none;
   }
 
   > .active > a,
   > .active > a:hover,
   > .active > a:focus {
-    border: 1px solid @nav-tabs-justified-link-border-color;
+    border: 3px solid @nav-tabs-justified-link-border-color;
+    border-bottom-style: none;
+    padding-bottom: 11px;
   }
 
   @media (min-width: @screen-sm-min) {
     > li > a {
-      border-bottom: 1px solid @nav-tabs-justified-link-border-color;
-      border-radius: @border-radius-base @border-radius-base 0 0;
+      border-bottom: 3px solid @nav-tabs-justified-link-border-color;
+      // border-radius: @border-radius-base @border-radius-base 0 0;
     }
-    > .active > a,
-    > .active > a:hover,
-    > .active > a:focus {
-      border-bottom-color: @nav-tabs-justified-active-link-border-color;
-    }
+    // > .active > a,
+    // > .active > a:hover,
+    // > .active > a:focus {
+    //   // border-bottom-color: @nav-tabs-justified-active-link-border-color;
+    // }
   }
 }
 
