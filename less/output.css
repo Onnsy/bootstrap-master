@@ -3450,6 +3450,11 @@ fieldset[disabled] .btn-group .btn-default.active {
 .btn-group-justified > .btn-group .dropdown-menu {
   left: auto;
 }
+.btn-group-justified .btn:not(:first-child),
+.btn-group-justified .btn-group:not(:first-child) > button,
+.btn-group-justified .btn-group:not(:first-child) > a {
+  border-left-style: none;
+}
 [data-toggle="buttons"] > .btn > input[type="radio"],
 [data-toggle="buttons"] > .btn > input[type="checkbox"] {
   position: absolute;
