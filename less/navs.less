@@ -120,6 +120,7 @@
 
     > li {
       > a{
+        border-top: 3px solid transparent;
         &:hover,
         &:active,
         &:focus{
@@ -147,9 +148,7 @@
       border-radius: @nav-pills-border-radius;
       border: 3px solid transparent;
     }
-    + li {
-      margin-left: 5px;
-    }
+    
 
     // Active state
     &.active > a {
@@ -163,6 +162,9 @@
     }
   }
 }
+.nav-pills:not(.nav-justified) li + li {
+  margin-left: 5px;
+}
 
 
 
@@ -172,7 +174,7 @@
     float: none;
     + li {
       margin-top: 5px;
-      margin-left: 0; // no need for this gap between nav items
+      margin-left: 0 !important; // no need for this gap between nav items
     }
   }
 }
