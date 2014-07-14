@@ -26,14 +26,17 @@
   margin-bottom: -1px;
   background-color: @list-group-bg;
   border: 1px solid @list-group-border;
+  border-left-width: 4px;
+  border-right-width: 4px;
 
   // Round the first and last items
   &:first-child {
-    .border-top-radius(@list-group-border-radius);
+    border-top-width: 3px;
   }
   &:last-child {
+    border-bottom-width: 3px;
     margin-bottom: 0;
-    .border-bottom-radius(@list-group-border-radius);
+    
   }
 
   // Align badges within list items
@@ -92,7 +95,6 @@ a.list-group-item {
     z-index: 2; // Place active items above their siblings for proper border styling
     color: @list-group-active-color;
     background-color: @list-group-active-bg;
-    border-color: @list-group-active-border;
 
     // Force color to inherit for custom content
     .list-group-item-heading,
