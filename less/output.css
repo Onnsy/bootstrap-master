@@ -4871,7 +4871,7 @@ a.thumbnail.active {
   padding: 10px 15px;
   margin-bottom: -1px;
   background-color: #ffffff;
-  border: 1px solid #dddddd;
+  border: 1px solid #f0f0f0;
   border-left-width: 4px;
   border-right-width: 4px;
 }
@@ -4884,6 +4884,7 @@ a.thumbnail.active {
 }
 .list-group-item > .badge {
   float: right;
+  background-color: #9a9a9a;
 }
 .list-group-item > .badge + .badge {
   margin-right: 5px;
