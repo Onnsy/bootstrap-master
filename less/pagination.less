@@ -41,6 +41,9 @@
       background-color: @pagination-hover-bg;
       border-color: @pagination-hover-border;
     }
+    &:active{
+      background-color: darken(@pagination-hover-bg, 15%);
+    }
   }
 
   > .active > a,
@@ -52,6 +55,9 @@
       color: @pagination-active-color;
       background-color: @pagination-active-bg;
       cursor: default;
+    }
+    &:active{
+      background-color: darken(@pagination-hover-bg, 15%);
     }
   }
 
